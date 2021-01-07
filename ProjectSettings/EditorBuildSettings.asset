@@ -26,9 +26,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GasStation.unity
     guid: a961507b9c6188e479ec72e73008f518
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Hospital.unity
     guid: f974db0dd6540be46b43717a561bae70
+  - enabled: 1
+    path: Assets/Scenes/Bawordetsu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Police.unity
     guid: 71b570eaaa16c18409354307143f159b

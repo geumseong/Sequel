@@ -35,7 +35,7 @@ public class MiniGameWon : MonoBehaviour
         yield return null;
         looseUI.SetActive(true);
         yield return new WaitForSeconds(2f);
-        SceneLoader.Instance.ReloadScene();
+        SceneLoader.Instance.LoadScene(2);
     }
 
     public void Win()
