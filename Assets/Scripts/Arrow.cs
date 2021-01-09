@@ -10,12 +10,14 @@ public class Arrow : MonoBehaviour
     public GameObject target;
     Transform projectile;
     Transform gravity;
+    public bool gravityPull;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         projectile = this.transform;
+        gravityPull = false;
     }
 
     // Update is called once per frame
@@ -48,22 +50,23 @@ public class Arrow : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider) {
         if(collider.tag == "Gravity") {
             gravity = collider.transform;
+            gravityPull = true;
             StartCoroutine(Gravity());
         }
     }
 
     void OnTriggerExit2D(Collider2D collider) {
         if(collider.tag == "Gravity") {
-            StopCoroutine(Gravity());
+            gravityPull = false;
         }
     }
 
     IEnumerator Gravity() {
-        while(true) {
+        while(gravityPull) {
             Vector2 projectilePos = new Vector2(projectile.position.x, projectile.position.y);
             Vector2 gravityPos = new Vector2(gravity.position.x, gravity.position.y);
             Vector2 dir = (gravityPos - projectilePos).normalized;
-            projectile.gameObject.GetComponent<Rigidbody2D>().AddForce(dir * 100f);
+            projectile.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir.x, dir.y) * 20f);
             yield return new WaitForSeconds(0.1f);
         }
     }

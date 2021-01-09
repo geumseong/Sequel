@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/CampingSite.unity
+    path: Assets/Scenes/Aim&Fire.unity
     guid: 7036ebafc5bc56b4b923f2fab33c4215
   - enabled: 1
     path: Assets/Scenes/Gravireee.unity
