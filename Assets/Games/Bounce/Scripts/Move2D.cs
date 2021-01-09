@@ -7,6 +7,10 @@ public class Move2D : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    public SpriteRenderer Sp;
+    public Sprite jump;
+    public Sprite norm;
+
     public float launchForce;
     public float moveSpeed = 5f;
     
@@ -16,7 +20,12 @@ public class Move2D : MonoBehaviour
     Vector3 movement;
     Vector3 conveyorSpeed;
     Vector3 lastMovement;
-    
+
+    void Start()
+    {
+        Sp = this.GetComponent<SpriteRenderer>();
+    }
+
     void Update()
     {
         Jump();
@@ -26,6 +35,16 @@ public class Move2D : MonoBehaviour
                 lastMovement = movement;
             }
         }
+
+        if (isGrounded == false)
+        {
+            Sp.sprite = jump;
+        }
+        else
+        {
+            Sp.sprite = norm;
+        }
+
         Vector3 finalMovement = movement + conveyorSpeed;
         transform.position += finalMovement * Time.deltaTime * moveSpeed;
     }
@@ -35,6 +54,7 @@ public class Move2D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded == true && onIce == false)
         {
             gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 5f), ForceMode2D.Impulse);
+            
         }
     }
 
