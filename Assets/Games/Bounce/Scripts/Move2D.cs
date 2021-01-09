@@ -9,9 +9,7 @@ public class Move2D : MonoBehaviour
 
     public float launchForce;
     public float moveSpeed = 5f;
-
-    public GameObject GameOver;
-
+    
     public bool isGrounded = false;
     public bool onIce = false;
 
@@ -76,14 +74,7 @@ public class Move2D : MonoBehaviour
     {
         if (other.tag == "Death")
         {
-            StartCoroutine(Ded());
+            GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
         }
-    }
-
-    IEnumerator Ded()
-    {
-        GameOver.SetActive(true);
-        yield return new WaitForSeconds(5);
-        SceneManager.LoadScene("LVL1");
     }
 }
