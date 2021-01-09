@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro.Examples;
+using TMPro;
 
 public class Worddisplay : MonoBehaviour
 {
     public Wordmanager wordmanager;
     public Word word;
     public float fallSpeed = 1f;
-    public Text text;
+    public TMP_Text text;
     public int index;
     public int indextocheck;
 
@@ -21,7 +23,8 @@ public class Worddisplay : MonoBehaviour
     {
         if (text != null) { 
         text.text = text.text.Remove(0, 1);
-        text.color = Color.red;
+        text.color = Color.magenta;
+        Debug.Log("boom");
         }
     }
 

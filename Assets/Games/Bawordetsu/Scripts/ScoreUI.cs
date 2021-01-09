@@ -77,6 +77,7 @@ public class ScoreUI : MonoBehaviour
     {
         //LoseUI.gameObject.SetActive(true);
         gameend = true;
+        Timer.text = ("try again");
         GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
     }
 }
