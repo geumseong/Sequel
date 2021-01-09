@@ -21,7 +21,7 @@ public class StateManager : MonoBehaviour
         Instance = this;
         SwitchState(State.START);
         DontDestroyOnLoad(this.gameObject);
-        text.text = "";
+        //text.text = "";
     }
     private void SwitchState(State s)
     {
@@ -34,7 +34,6 @@ public class StateManager : MonoBehaviour
                 break;
             case State.INGAME:
                 Time.timeScale = 1;
-
                 //hud.gameObject.SetActive(false);
                 break;
             case State.END:

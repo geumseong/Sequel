@@ -15,6 +15,7 @@ public class MouseMovement : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
         movement = false;
     }
 
@@ -25,7 +26,7 @@ public class MouseMovement : MonoBehaviour
         if (rb.velocity.magnitude > maxspeed)
         { rb.velocity = rb.velocity.normalized * maxspeed; }
         if (Input.GetKeyDown(KeyCode.Escape))
-        { StateManager.Instance.Pause(); }
+        { GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose(); }
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -38,7 +39,7 @@ public class MouseMovement : MonoBehaviour
         if (collision.gameObject.tag == "Goal")
         {
             Debug.Log("goalreached");
-            Sceneloader.goalreached = true;
+            //Sceneloader.goalreached = true;
             GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Win();
         }
     }
