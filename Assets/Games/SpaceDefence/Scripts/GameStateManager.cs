@@ -7,7 +7,7 @@ public class GameStateManager : MonoBehaviour
 {
     EnemySpawner enemySpawner;
     public GameObject waveCountObj;
-    int waveCount;
+    int waveCount = 3;
     int phase = 1;
     public GameObject nextWaveButton;
     public bool waveStatus;
@@ -21,7 +21,7 @@ public class GameStateManager : MonoBehaviour
 
     public void GameOver()
     {
-        GameOverUI.SetActive(true);
+        GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
         GameObject.Find("WaveCountTXT").GetComponent<Text>().text = "Waves Survived: \n" + (waveCount - 1);
         Time.timeScale = 0f;
     }
@@ -30,7 +30,7 @@ public class GameStateManager : MonoBehaviour
     {
         countDownObj.SetActive(false);
         enemySpawner = GameObject.FindObjectOfType<EnemySpawner>();
-        waveCount = 0;
+        waveCount = 3;
         waveCountObj.GetComponent<Text>().text = "Waves: 0";
         moneyOwnedTxt.GetComponent<Text>().text = "Owned Money: " + money;
         GameOverUI.SetActive(false);
@@ -61,7 +61,7 @@ public class GameStateManager : MonoBehaviour
         phase = (int)((waveCount/5) + 1);
         Debug.Log("phase = " + phase);
         Debug.Log("waveCount%5+1 = " + ((waveCount)%5)+1);
-        waveCountObj.GetComponent<Text>().text = "Waves: " + (waveCount + 1);
+        waveCountObj.GetComponent<Text>().text = "Waves: " + (waveCount - 2);
         enemySpawner.StartSpawnEnemy((waveCount%5)+1, phase);
         countDownObj.SetActive(false);
         shopUI.GetComponent<Shop>().Cancel();
@@ -71,8 +71,13 @@ public class GameStateManager : MonoBehaviour
     }
 
     public void StartCountDown() {
-        coroutine = CountDown();
-        StartCoroutine(coroutine);
+        if(waveCount == 5) {
+            GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Win();
+        }
+        else {
+            coroutine = CountDown();
+            StartCoroutine(coroutine);
+        }
     }
     
     IEnumerator CountDown() {

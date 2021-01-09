@@ -8,11 +8,14 @@ public class Arrow : MonoBehaviour
     Rigidbody2D rb;
     public ParticleSystem ps;
     public GameObject target;
+    Transform projectile;
+    Transform gravity;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        projectile = this.transform;
     }
 
     // Update is called once per frame
@@ -39,6 +42,29 @@ public class Arrow : MonoBehaviour
         if(collision.gameObject.tag == "wall") {
             Debug.Log("wall hit");
             Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collider) {
+        if(collider.tag == "Gravity") {
+            gravity = collider.transform;
+            StartCoroutine(Gravity());
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider) {
+        if(collider.tag == "Gravity") {
+            StopCoroutine(Gravity());
+        }
+    }
+
+    IEnumerator Gravity() {
+        while(true) {
+            Vector2 projectilePos = new Vector2(projectile.position.x, projectile.position.y);
+            Vector2 gravityPos = new Vector2(gravity.position.x, gravity.position.y);
+            Vector2 dir = (gravityPos - projectilePos).normalized;
+            projectile.gameObject.GetComponent<Rigidbody2D>().AddForce(dir * 100f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

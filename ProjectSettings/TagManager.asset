@@ -15,6 +15,16 @@ TagManager:
   - sideRect
   - triangle
   - leg
+  - ProjectileRemover
+  - Meteorite
+  - SmallAlien
+  - MediumAlien
+  - BossAlien
+  - Enemy
+  - Target
+  - Ball
+  - Ground
+  - Gravity
   layers:
   - Default
   - TransparentFX
