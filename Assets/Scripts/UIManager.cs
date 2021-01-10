@@ -11,6 +11,7 @@ public class UIManager : MonoBehaviour
     }
 
     public GameObject interactUI;
+    public GameObject nonInteractUI;
     public GameObject pauseUI;
 
     public bool paused;
@@ -46,6 +47,16 @@ public class UIManager : MonoBehaviour
     public void HideInteractable()
     {
         interactUI.SetActive(false);
+    }
+
+    public void DisplayNonInteractable()
+    {
+        nonInteractUI.SetActive(true);
+    }
+
+    public void HideNonInteractable()
+    {
+        nonInteractUI.SetActive(false);
     }
 
     public void DisplayPauseUI()
