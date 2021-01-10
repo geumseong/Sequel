@@ -594,6 +594,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3566069418577140832, guid: adfbb369b50ceb54a86bd36cce61205a,
+        type: 3}
+      propertyPath: levelTrophy
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3566069418577140846, guid: adfbb369b50ceb54a86bd36cce61205a,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -18,6 +18,8 @@ public class OverworldTrophies : MonoBehaviour
     public GameObject shipBoom_fl;
     public GameObject spaceDefence_fl;
 
+    public TriggerEnter lsjTrigger;
+
     public int trophycounter;
 
     void Start()
@@ -63,6 +65,11 @@ public class OverworldTrophies : MonoBehaviour
             spaceDefence_tr.SetActive(true);
             spaceDefence_fl.SetActive(true);
             trophycounter++;
+        }
+
+        if (trophycounter == 6)
+        {
+            lsjTrigger.lsj = false;
         }
 
     }

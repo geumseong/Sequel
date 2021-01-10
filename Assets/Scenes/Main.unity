@@ -1684,6 +1684,7 @@ MonoBehaviour:
   stationJump_fl: {fileID: 767045803}
   shipBoom_fl: {fileID: 1103028257}
   spaceDefence_fl: {fileID: 1631261755}
+  lsjTrigger: {fileID: 0}
   trophycounter: 0
 --- !u!1 &767045803
 GameObject:

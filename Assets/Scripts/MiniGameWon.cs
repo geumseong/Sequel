@@ -7,6 +7,7 @@ public class MiniGameWon : MonoBehaviour
     public GameObject winUI;
     public GameObject looseUI;
     public Animator animator;
+    public int levelTrophy;
 
     public AudioClip looseClip;
     private AudioSource audioSource;
@@ -40,6 +41,7 @@ public class MiniGameWon : MonoBehaviour
 
     public void Win()
     {
+        TrophyManager.Instance.GetTrophy(levelTrophy);
         StartCoroutine(ReturnToMainWin());
     }
 
