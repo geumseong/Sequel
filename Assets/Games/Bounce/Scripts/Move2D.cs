@@ -28,6 +28,11 @@ public class Move2D : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
+        }
+
         Jump();
         if(onIce == false) {
             movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);

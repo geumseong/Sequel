@@ -44,6 +44,11 @@ public class Bow : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
+        }
+
         Vector2 rotationPivot = transform.position;
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         direction = mousePosition - rotationPivot;

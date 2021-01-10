@@ -25,7 +25,12 @@ public class TurretProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(target == null) {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
+        }
+
+        if (target == null) {
             Destroy(gameObject);
             return;
         }

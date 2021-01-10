@@ -13,17 +13,12 @@ public class PauseMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            
+                GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
+            
         }
     }
-    public void Resume()
+    /*public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -49,5 +44,5 @@ public class PauseMenuManager : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("QUIT");
-    }
+    }*/
 }

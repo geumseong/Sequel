@@ -22,7 +22,12 @@ public class CarMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(face == "right") {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
+        }
+
+        if (face == "right") {
             transform.rotation = Quaternion.Euler(0, 0, 0);
             this.GetComponent<SpriteRenderer>().sprite = car1;
             transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
