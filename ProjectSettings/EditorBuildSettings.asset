@@ -41,4 +41,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Games/LSJ ep 1/Assets/Scenes/LSJ.unity
     guid: e003fa13002709d41a8683762943b0e4
+  - enabled: 1
+    path: Assets/Scenes/DAB.unity
+    guid: 29bf0679a51e55943b2d6800c6a75df2
   m_configObjects: {}

@@ -10,6 +10,7 @@ public class OverworldTrophies : MonoBehaviour
     public GameObject stationJump_tr;
     public GameObject shipBoom_tr;
     public GameObject spaceDefence_tr;
+    public GameObject DAB_tr;
 
     public GameObject graviree_fl;
     public GameObject aimAndFire_fl;
@@ -17,6 +18,7 @@ public class OverworldTrophies : MonoBehaviour
     public GameObject stationJump_fl;
     public GameObject shipBoom_fl;
     public GameObject spaceDefence_fl;
+    public GameObject DAB_fl;
 
     public TriggerEnter lsjTrigger;
 
@@ -67,7 +69,14 @@ public class OverworldTrophies : MonoBehaviour
             trophycounter++;
         }
 
-        if (trophycounter == 6)
+        if (TrophyManager.Instance.downloadASpaceship_Trophy == true)
+        {
+            DAB_tr.SetActive(true);
+            DAB_fl.SetActive(true);
+            trophycounter++;
+        }
+
+        if (trophycounter == 7)
         {
             lsjTrigger.lsj = false;
         }
