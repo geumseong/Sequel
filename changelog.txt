@@ -1,0 +1,14 @@
+Commit 3: Bawordetsu Added
+Commit 4: Bounce Added
+Commit 5-6: Ka(r)Boom Added
+Commit 7: Space Defence Added
+Commit 18: Graviry Added
+Commit 20: Aim&Fire Added
+Commit 26: New Map Added
+Commit 27-28: Trophy System Added
+Commit 29: LSJ Added
+Commit 31: UI Update
+Commit 32: Download A Spaceship Added
+Commit 33: New Player Asset Added
+Commit 36: Space-Looney Added
+Commit 42: Final Version
