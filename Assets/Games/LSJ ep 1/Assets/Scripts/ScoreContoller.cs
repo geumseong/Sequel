@@ -25,7 +25,7 @@ public class ScoreContoller : MonoBehaviour
         score++;
         scoreText.GetComponent<Text>().text = "Score: " + score;
 
-        if (score >= 10)
+        if (score >= 15)
         {
             GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Win();
 

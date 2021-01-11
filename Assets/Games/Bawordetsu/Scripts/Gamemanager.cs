@@ -25,23 +25,23 @@ public class Gamemanager
         switch (combo)
         {
             case 1:
-                score += 100;
+                score += 200;
                 break;
             case 2:
                 Debug.Log("Good!");
-                score += 250;
+                score += 500;
                 break;
             case 3:
                 Debug.Log("Nice!");
-                score += 500;
+                score += 900;
                 break;
             case 4:
                 Debug.Log("Wow!");
-                score += 750;
+                score += 1400;
                 break;
             case 5:
                 Debug.Log("YES!");
-                score += 1000;
+                score += 2000;
                 break;
             default:
                 break;

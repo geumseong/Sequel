@@ -8,6 +8,7 @@ public class MiniGameWon : MonoBehaviour
     public GameObject looseUI;
     public Animator animator;
     public int levelTrophy;
+    public bool lsj;
 
     public AudioClip looseClip;
     private AudioSource audioSource;
@@ -27,7 +28,12 @@ public class MiniGameWon : MonoBehaviour
 
     public void Loose()
     {
-        StartCoroutine(ReturnToMainLose());
+        if(lsj == true) {
+            TrophyManager.Instance.GetTrophy(9);
+            StartCoroutine(ReturnToMainLose());
+        }
+        else
+            StartCoroutine(ReturnToMainLose());
     }
 
     private IEnumerator ReturnToMainLose()

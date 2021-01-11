@@ -11,6 +11,7 @@ public class TrophyManager : MonoBehaviour
     public bool shipBoom_Trophy; //5
     public bool spaceDefence_Trophy; //6
     public bool downloadASpaceship_Trophy; //7
+    public bool spaceLooney_Trophy; //8
 
     private static TrophyManager _instance;
 
@@ -57,6 +58,19 @@ public class TrophyManager : MonoBehaviour
                 break;
             case 7:
                 downloadASpaceship_Trophy = true;
+                break;
+            case 8:
+                spaceLooney_Trophy = true;
+                break;
+            case 9:
+                gravireee_Trophy = false; //1
+                aimAndFire_Trophy = false; //2
+                spacewordetsu_Trophy = false; //3
+                stationJump_Trophy = false; //4
+                shipBoom_Trophy = false; //5
+                spaceDefence_Trophy = false; //6
+                downloadASpaceship_Trophy = false; //7
+                spaceLooney_Trophy = false; //8
                 break;
             default:
                 break;

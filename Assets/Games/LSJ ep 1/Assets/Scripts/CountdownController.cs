@@ -27,10 +27,13 @@ public class CountdownController : MonoBehaviour
 
         countdownDisplay.text = "OVER!";
 
-        if (scorre.score < 10)
+        if (scorre.score < 15)
         {
+            Debug.Log("lost");
             GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
-
+        }
+        else {
+            GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Win();
         }
     }
 }

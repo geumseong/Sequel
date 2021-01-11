@@ -10,7 +10,7 @@ public class Wordgenerator : MonoBehaviour
     "expansion", "bowie", "starman", "starlord", "ringworld", "continuum", "life", "singularity", "ai", "curvature", "speed", "lightyear", "moore", "transhuman", "bioengineering", "genetic",
     "nootropic", "noosphere", "exponential", "shift", "hyperbolic", "circuit", "algorithm", "consciousness", "revolution", "technology", "neuroenhancement", "uploading", "global", "future",
     "simulation", "intelligence", "nanotechnology", "bytes", "exosphere", "cognitive", "digital", "meteorite", "existential", "humanity", "ridley", "samus", "freedom", "humankind", "union",
-    "hawking", "chemistry"};
+    "hawking", "chemistry", "한국어 :)"};
 
     public static string GetRandomWord()
     {

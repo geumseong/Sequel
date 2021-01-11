@@ -11,6 +11,7 @@ public class OverworldTrophies : MonoBehaviour
     public GameObject shipBoom_tr;
     public GameObject spaceDefence_tr;
     public GameObject DAB_tr;
+    public GameObject spaceLooney_tr;
 
     public GameObject graviree_fl;
     public GameObject aimAndFire_fl;
@@ -19,6 +20,7 @@ public class OverworldTrophies : MonoBehaviour
     public GameObject shipBoom_fl;
     public GameObject spaceDefence_fl;
     public GameObject DAB_fl;
+    public GameObject spaceLooney_fl;
 
     public TriggerEnter lsjTrigger;
 
@@ -76,7 +78,14 @@ public class OverworldTrophies : MonoBehaviour
             trophycounter++;
         }
 
-        if (trophycounter == 7)
+        if (TrophyManager.Instance.spaceLooney_Trophy == true)
+        {
+            spaceLooney_tr.SetActive(true);
+            spaceLooney_fl.SetActive(true);
+            trophycounter++;
+        }
+
+        if (trophycounter == 8)
         {
             lsjTrigger.lsj = false;
         }

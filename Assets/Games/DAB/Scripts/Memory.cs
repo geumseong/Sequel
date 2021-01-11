@@ -104,7 +104,7 @@ public class Memory : MonoBehaviour
             rememberScore.text = "Final Score: " + score + "/" + cardstreak;
             whichCardDifficulty.text = ("");
 
-            if (score < 5)
+            if (score < 8)
                 GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Loose();
             else
                 GameObject.Find("WinMinigame").GetComponent<MiniGameWon>().Win();

@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   total: {fileID: 8300000, guid: f0b3dfb8a3d4896429a8a91737594458, type: 3}
-  theme: {fileID: 8300000, guid: ce4297965ecd65e49bc1258e8a2a78a1, type: 3}
+  theme: {fileID: 8300000, guid: f0b3dfb8a3d4896429a8a91737594458, type: 3}
 --- !u!1 &216315183
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +866,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -340.77002}
+  m_AnchoredPosition: {x: 0, y: -588.77}
   m_SizeDelta: {x: 637.8237, y: 212.69702}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &399646085
@@ -1229,7 +1229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -264.55002}
+  m_AnchoredPosition: {x: 0, y: -512.55005}
   m_SizeDelta: {x: 637.8237, y: 212.69702}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &636813811
@@ -2866,6 +2866,7 @@ MonoBehaviour:
   shipBoom_Trophy: 0
   spaceDefence_Trophy: 0
   downloadASpaceship_Trophy: 0
+  spaceLooney_Trophy: 0
 --- !u!4 &1695214497
 Transform:
   m_ObjectHideFlags: 0
@@ -3524,7 +3525,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -417}
+  m_AnchoredPosition: {x: 0, y: -665}
   m_SizeDelta: {x: 637.8237, y: 212.69702}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2035875378
