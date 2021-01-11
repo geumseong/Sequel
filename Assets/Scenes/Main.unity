@@ -3451,6 +3451,7 @@ GameObject:
   - component: {fileID: 1402743578}
   - component: {fileID: 1402743577}
   - component: {fileID: 1402743579}
+  - component: {fileID: 1402743580}
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -3497,8 +3498,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: -7921649188387484213, guid: a425bab39780e3b4891eaaf4d8f376b3,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25f19142cdc3cdf4181f4c77dd7eb840, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3536,18 +3536,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.48915678}
+  m_Offset: {x: 0, y: 0.20512438}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.25}
-    oldSize: {x: 3.23, y: 5.63}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 3.2}
     newSize: {x: 3.23, y: 5.63}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.015283, y: 4.070783}
+  m_Size: {x: 3.015283, y: 2.5850725}
   m_EdgeRadius: 0
 --- !u!50 &1402743578
 Rigidbody2D:
@@ -3586,6 +3586,25 @@ MonoBehaviour:
   currentMinigame: {fileID: 0}
   accelerationPower: 50
   steeringPower: 0.5
+--- !u!95 &1402743580
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402743574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ea2b12553fe69c408b8e06a5d4a3744, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1448972554
 GameObject:
   m_ObjectHideFlags: 0
