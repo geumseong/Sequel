@@ -100,8 +100,8 @@ MonoBehaviour:
   xAxis: 0
   direction: 0
   face: 
-  car1: {fileID: 21300000, guid: 31a634c37a42c6c4cabeaf74140198fe, type: 3}
-  car2: {fileID: 21300000, guid: 43bfe7ecb9fa71b4d979f392a259a14a, type: 3}
+  car1: {fileID: 21300000, guid: 25f19142cdc3cdf4181f4c77dd7eb840, type: 3}
+  car2: {fileID: 21300000, guid: 25f19142cdc3cdf4181f4c77dd7eb840, type: 3}
   effect: {fileID: 198194127032045410, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
 --- !u!50 &-6090642186294216203
 Rigidbody2D:
